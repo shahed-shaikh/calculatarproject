@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+	<head>
+		<title>
+			calculate percentage
+		</title>
+		 <meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+	</head>
+	<body class="flex flex-col items-center justify-center h-150 pt-15">
+		<!-- Bordered Table -->
+		<div class="overflow-x-auto relative rounded-5xl">
+			<table class="min-w-full text-sm text-left text-gray-700 border border-collapse border-gray-300">
+				<thead class="text-xs text-gray-700 uppercase bg-green-200">
+					<tr>
+						<th scope="col" class="px-7 py-4 border border-gray-300 text-lg">SUBJECTY</th>
+						<th scope="col" class="px-7 py-4 border border-gray-300 text-lg">OBTAINED MARKS</th>
+						<th scope="col" class="px-7 py-4 border border-gray-300 text-lg">MARKS</th>
+						
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="bg-white">
+						<td class="px-7 py-3 border border-gray-300 font-medium text-gray-900 text-center">english</td>
+						<td class="px-7 py-3 border border-gray-300 font-medium text-gray-900"><input type="number" id="name1" min="1" max="100" class=" w-38 h-10 text-lg border-1 rounded-lg text-center" /></td>
+						<td class="px-7 py-3 border border-gray-300 font-medium text-gray-900 text-center">100</td>
+					</tr>
+					<tr class="bg-white">
+						<td class="px-7 py-3 border border-gray-300 font-medium text-gray-900 text-center">marathi</td>
+						<td class="px-7 py-3 border border-gray-300 font-medium text-gray-900"><input type="number" id="name2" min="1" max="100" class=" w-38 h-10 text-lg border-1 rounded-lg text-center" /></td>
+						<td class="px-7 py-3 border border-gray-300 font-medium text-gray-900 text-center">100</td>
+					</tr>
+					<tr class="bg-white">
+						<td class="px-7 py-3 border border-gray-300 font-medium text-gray-900 text-center">hindi</td>
+						<td class="px-7 py-3 border border-gray-300 font-medium text-gray-900"><input type="number" id="name3" min="1" max="100" class=" w-38 h-10 text-lg border-1 rounded-lg text-center" /></td>
+						<td class="px-7 py-3 border border-gray-300 font-medium text-gray-900 text-center">100</td>
+					</tr>
+					<tr class="bg-white">
+						<td class="px-7 py-3 border border-gray-300 font-medium text-gray-900 text-center">maths</td>
+						<td class="px-7 py-3 border border-gray-300 font-medium text-gray-900"><input type="number" id="name4" min="1" max="100" class=" w-38 h-10 text-lg border-1 rounded-lg text-center" /></td>
+						<td class="px-7 py-3 border border-gray-300 font-medium text-gray-900 text-center">100</td>
+					</tr>
+					<tr class="bg-white">
+						<td class="px-7 py-3 border border-gray-300 font-medium text-gray-900 text-center">science</td>
+						<td class="px-7 py-3 border border-gray-300 font-medium text-gray-900"><input type="number" id="name5" min="1" max="100" class=" w-38 h-10 text-lg border-1 rounded-lg text-center" /></td>
+						<td class="px-7 py-3 border border-gray-300 font-medium text-gray-900 text-center">100</td>
+					</tr>
+					<tr class="bg-white">
+						<td class="px-7 py-3 border border-gray-300 font-medium text-gray-900 text-center">history</td>
+						<td class="px-7 py-3 border border-gray-300 font-medium text-gray-900"><input type="number" id="name6" min="1" max="100" class=" w-38 h-10 text-lg border-1 rounded-lg text-center" /></td>
+						<td class="px-7 py-3 border border-gray-300 font-medium text-gray-900 text-center">100</td>
+						
+					</tr>
+					<tr class="bg-gray-100">
+						<td class="px-7 py-3 border border-gray-300 font-medium text-gray-900 text-center">TOTAL</td>
+						<td class="px-7 py-3 border border-gray-300 font-medium text-gray-900 text-center" id="shahed1"> </td>
+						<td class="px-7 py-3 border border-gray-300 font-medium text-gray-900 text-center">600</td>
+						
+					</tr>
+					<tr class="bg-green-200">
+						<td class="px-7 py-3 border border-gray-300 font-medium text-gray-900 text-center"><button onclick="go()">CALCULATE</button></td>
+						<td class="px-7 py-3 border border-gray-300 font-medium text-gray-900 text-center" id="shahed2"></td>
+						<td class="px-7 py-3 border border-gray-300 font-medium text-gray-900 text-center" id="shahed3">  </td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+			
+			<script>
+				function go(){
+					var a = (document.getElementById('name1') .value);
+					var b = (document.getElementById('name2') .value);
+					var c = (document.getElementById('name3') .value);
+					var d = (document.getElementById('name4') .value);
+					var e = (document.getElementById('name5') .value);
+					var f = (document.getElementById('name6') .value);
+
+					const w = document.getElementById('shahed1').innerHTML = (Number(a) + Number(b) + Number(c) + Number(d) + Number(e) + Number(f));
+					
+					const x = document.getElementById('shahed2').innerHTML = (w / 600) * 100;
+					 
+					
+					if(x <35 || a <35 || b <35 || c <35 || d <35 || e <35 || f <35){
+					document.getElementById('shahed3').innerHTML = "fail";
+					}
+					<!-- if(x <0 || a <0 || b <0 || c <0 || d <0 || e <0 || f <0){ -->
+					<!-- document.getElementById('shahed3').innerHTML = "fail"; -->
+					<!-- } -->
+					
+					
+					else if(x < 50){
+						document.getElementById('shahed3').innerHTML = "E grade";
+					}
+					
+					else if(x < 60){
+						document.getElementById('shahed3').innerHTML = "d grade";
+					}
+					else if(x < 70){
+						document.getElementById('shahed3').innerHTML = "c grade";
+					}
+					else if(x < 80){
+						document.getElementById('shahed3').innerHTML = "b grade";
+					}
+					else if(x <= 100){
+						document.getElementById('shahed3').innerHTML = "a grade";
+					}
+					else {
+						document.getElementById('shahed3').innerHTML = "not valid";
+					}
+					
+					
+				} 
+					
+				
+					
+				
+				
+			</script>
+			
+	</body>
+</html>
